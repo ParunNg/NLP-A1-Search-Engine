@@ -9,14 +9,13 @@ with open('embeddings/glove_embeds.pickle', 'rb') as f:
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-        
     if request.method == 'POST':
         query = request.form['query']
         most_sim = get_most_similar(query, embeds, 10)
-        print(most_sim)
-        return render_template('home.html', most_sim=most_sim, show="table")
+        return render_template('home.html', input=query, most_sim=most_sim, show_table="table", show_text="block")
+
     else:
-        return render_template('home.html', show="none")
+        return render_template('home.html', show_table="none", show_text="none")
 
 if __name__ == '__main__':
     app.run(debug=True)

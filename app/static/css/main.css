@@ -6,11 +6,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h3 {
+.web_title {
     margin: 0;
     padding: 5px;
     padding-left: 20px;
-    background-color: #a1a1a1;
+    background-color: #b5b5b5;
 }
 
 .content {
@@ -34,6 +34,10 @@ h3 {
 
 form {
     margin: 20px;
+}
+
+h4 {
+    text-align: center;
 }
 
 table, td, th {
